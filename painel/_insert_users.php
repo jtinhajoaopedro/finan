@@ -1,5 +1,6 @@
 <?php
 // criptografia de senha usando php
+// criptografia de senha no banco de dados =)
 
     include './conexao/conexao.php';
 
@@ -8,7 +9,7 @@
     $nivel = 3;
 
     $sql = "SELECT * FROM usuario where mail = '$mail'";
-    $search = mysqli_query($conexao,$sql);
+    $search = mysqli_query($conexao, $sql);
 
     $total = mysqli_num_rows($search);
 

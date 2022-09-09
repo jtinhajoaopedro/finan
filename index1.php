@@ -1,6 +1,7 @@
 <?php
 session_start();
 include './painel/conexao/conexao.php';
+include './painel/script/password.php';
 
 $mail = $_POST['mail'];
 $password = $_POST['password'];
@@ -11,7 +12,7 @@ $array = mysqli_fetch_array($search);
 
 $passwordBase = $array['password'];
 
-$passwordEnc = $password;
+$passwordEnc = sha1($password);
 
 if($passwordEnc == $passwordBase){
 

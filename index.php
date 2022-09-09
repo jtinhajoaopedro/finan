@@ -27,13 +27,21 @@
         <br><br>
 
         <form action="index1.php" method="post">
-       
+          <?php
 
+          if(isset($_GET['msg'])){
+            $msg = $_GET['msg'];
+            if($msg == 1){?>
+          <div class="alert-info" role="alert">
+            Cadastrado com sucesso!
+          </div>  
+          <?php } else {?>
+    
               <div class="alert alert-danger" role="alert">
              Senha errada/Este e-mail não está cadastrado
             </div>
           
-
+            <?php } }?>
           <div class="form-group">
             <label for="exampleInputEmail1" id="cor">E-Mail</label>
             <input type="email" class="form-control" name="mail" id="exampleInputEmail1" aria-describedby="emailHelp">
