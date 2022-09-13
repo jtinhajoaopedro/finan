@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php 
+
+include 'header.php';
+include 'conexao/conexao.php';
+
+?>
 
 
 
@@ -71,37 +76,35 @@
 													</thead>
 													<tbody>
 														<?php
-														include 'conexao/conexao.php';
 														$sql = "SELECT * FROM project";
-														$search = mysqli_query($conexao, $sql);
+														$search = mysqli_query($conexao,$sql);
 
 														while ($array = mysqli_fetch_array($search)) {
 
-															$code = $array['id'];
+															$id = $array['id'];
 															$code = $array['code'];
 															$client = $array['client'];
-															$service = $_POST['service'];
+															$service = $array['service'];
 															$npayments = $array['npayments'];
 															$dateend = $array['dateend'];
 															$paytotal = $array['paytotal'];
-															$contract = $_POST['contract'];
-														}
+															$contract = $array['contract'];
 														?>
 
 														<tr>
-															<td><?php echo $code?></td>
-															<td><?php echo $client?></td>
-															<td><?php echo $service?></td>
-															<td><?php echo $dateend?></td>
-															<td><?php echo 'R$'.$paytotal?></td>
-															<td><?php echo $npayments . 'payments'?></td>
-															<td><a role="button" href="images/<?php echo $contract?>" class="btn btn-primary" title="Details" target='_blank'><i class="fas fa-file-archive"></i></a></td>
+															<td><?php echo $code ?></td>
+															<td><?php echo $client ?></td>
+															<td><?php echo $service ?></td>
+															<td><?php echo $dateend ?></td>
+															<td><?php echo 'R$' . $paytotal ?></td>
+															<td><?php echo $npayments . 'payments' ?></td>
+															<td><a role="button" href="images/<?php echo $contract ?>" class="btn btn-primary" title="Details" target='_blank'><i class="fas fa-file-archive"></i></a></td>
 
 
 
 															<td>
-																<a role="button" href="project_details.php?code=<?php echo $code?>" class="btn btn-primary" title="Details" target='_blank'><i class="fas fa-eye"></i></a>
-																<a role="button" href="project_details.php?code=<?php echo $code?>" class="btn btn-success" title="Payments" target='_blank'><i class="fas fa-money-bill"></i></a>
+																<a role="button" href="project_details.php?code=<?php echo $code ?>" class="btn btn-primary" title="Details" target='_blank'><i class="fas fa-eye"></i></a>
+																<a role="button" href="project_details.php?code=<?php echo $code ?>" class="btn btn-success" title="Payments" target='_blank'><i class="fas fa-money-bill"></i></a>
 
 
 
@@ -110,7 +113,7 @@
 															</td>
 
 														</tr>
-																<?php  ?>
+														<?php } ?>
 
 
 
