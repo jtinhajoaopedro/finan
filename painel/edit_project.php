@@ -11,6 +11,6 @@ $npay = $_POST['npay'];
 $sql = "UPDATE project SET service = '$service', dateend = '$dateend', paytotal = '$paytotal',npayments = '$npay' WHERE code = $code";
 $att = mysqli_query($conexao, $sql);
 
-header('Location: project_details.php?code='.$code);
+header('Location: list_projects.php');
 
 ?>
