@@ -5,7 +5,7 @@ $titulo = $_POST['titulo'];
 $desc = $_POST['description'];
 $date1 = $_POST['date'];
 $value = $_POST['value'];
-$category = $_POST('categoria');
+$category = $_POST['categoria'];
 
 $doc = $_FILES['doc'];
 
@@ -34,3 +34,5 @@ if($ext == true){
     }
 }
 }
+
+header('Location: form_expense.php?msg=1');
