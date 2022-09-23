@@ -10,8 +10,8 @@ $nameImage = md5($_FILES['image']['tmp_name']);
 move_uploaded_file($image2['tmp_name'], "images/" . $nameImage .'.jpg');
 
 
-$sql = "UPDATE usuario SET image = '$nameImage' where id = $id";
+$sql = "UPDATE usuario SET image = '$nameImage' where id = '$id'";
 $insert = mysqli_query($conexao,$sql);
 
-
+header('Location: profile.php')
 ?>
