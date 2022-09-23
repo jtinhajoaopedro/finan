@@ -55,27 +55,31 @@
 								
 								<form action="insert_users.php" method="post" >
 									<div class="form-group">
-										<label for="exampleInputEmail1">Nome</label>
-										<input type="text" class="form-control"  placeholder="Your Name" name="name" required autocomplete="off">
+										<label for="nome">Nome</label>
+										<input type="text" class="form-control"  placeholder="Your Name" id="name" name="name" required autocomplete="off">
 										
 									</div>
                                     <div class="form-group">
-										<label for="exampleInputPassword1">E-mail</label>
-										<input type="text" class="form-control" id="exampleInputPassword1" name="Your Name" placeholder="Your e-mail" required autocomplete="off">
+										<label for="email">E-mail</label>
+										<input type="email" class="form-control" id="mail" name="mail" placeholder="Your e-mail" required autocomplete="off">
 									</div>
                                     <div class="form-group">
-										<label for="exampleInputPassword1">Senha</label>
-										<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Your Password" required autocomplete="off">
+										<label for="passord">Senha</label>
+										<input type="password" class="form-control" id="password" name="password" placeholder="Your Password" required autocomplete="off">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputPassword1">Telefone</label>
-										<input type="text" name="phone" class="form-control" placeholder="Telephone" id="telefone" name="telefone" required autocomplete="off">
+										<label for="telefone">Telefone</label>
+										<input type="text" name="telefone" class="form-control" placeholder="Telephone" id="telefone" name="telefone" required autocomplete="off">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputPassword1">Action</label>
-										<input type="text" class="form-control" id="exampleInputPassword1" name="business" placeholder="Your Business" required autocomplete="off">
+										<label for="exampleFormControlSelect1">User level</label>
+										<select class="form-control" id="exampleFormControlSelect1" name="level">
+											<option value="1" selected>Administrador</option>
+											<option value="2">Manager</option>
+											<option value="3">User</option>
+										</select>
 									</div>
-									<div style="text-align: right">
+
 										<button type="submit" class="btn btn-block btn-dark">Submit</button>
 									</div>
 								</form>

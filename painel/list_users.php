@@ -130,18 +130,18 @@
 												<table id="example" class="table table-bordered table-hover display" style="width:100%">
 													<thead>
 														<tr>
-															<th>Name</th>
-															<th>Telephone</th>
+															<th>Code</th>
+															<th>E-mail</th>
 															<?php
-															if ($nivelUser == 3) {
+															if($nivelUser =! 3) {
 
-															} else {?>
+															} else { ?>
 																<th>Action</th>
 															<?php }															
 
 															?>
 														</tr>
-													</thead>
+													</thead>           
 													<tbody>
 														<?php
 
@@ -155,22 +155,20 @@
 															$mail = $array['mail'];
 															$tel = $array['tel'];
 															
-
 															?>
 															<tr>
-																<td><?php echo $name ?></td>
-																<td><?php echo $tel ?></td>
+																<td><?php echo $id ?></td>
+																<td><?php echo $mail ?></td>
 
 
 																<?php
-																if ($nivelUser == 3) {
+																if ($nivelUser =! 3) {
 
 																} else { ?>
 																	<td>
 																		<button type="button" class="btn btn-warning" title="Edit" data-toggle="modal"
 																		 data-target="#editModal" data-id="<?php echo $id ?>" 
-																		 data-name="<?php echo $name ?>" data-mail="<?php echo $mail ?>" 
-																		 data-tel="<?php echo $tel ?>" data-nivel="<?php echo $nivel ?>">
+																		 data-name="<?php echo $name ?>" data-mail="<?php echo $mail ?>">
 																		 <i class="fas fa-user-edit"></i></button>
 
 																	</button>
