@@ -6,6 +6,7 @@ $id = $_POST['id'];
 
 $image2 = $_FILES['image'];
 $image = file_get_contents($_FILES['image']['tmp_name']);
+var_dump($imagem);
 $nameImage = md5($_FILES['image']['tmp_name']);
 move_uploaded_file($image2['tmp_name'], "images/" . $nameImage .'.jpg');
 
