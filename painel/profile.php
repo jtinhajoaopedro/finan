@@ -119,16 +119,8 @@ include '_select_nivel.php';
 
 									<div class="row">
 										<div class="col-lg-12">
-											<?php 
-											if ($image != null){
-												$image == $image2;
-											}
-											else{
-
-											}
 											
-											?>
-											<img alt="avatar" class="img-fluid" src="assets/images/avatars/avatar.png">
+											<img alt="avatar" class="img-fluid" src="images/avatars/avatar.png">
 										</div>
 									</div>
 
